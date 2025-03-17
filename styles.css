@@ -1,0 +1,251 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Norwester', sans-serif;
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3YxMTU1LWItMDExLmpwZw.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker tint */
+    background-blend-mode: multiply;
+    color: white;
+}
+
+/* Top bar styles */
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* White background */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+#menu-button {
+    background-color: transparent;
+    border: 2px solid black; /* Black border */
+    color: black; /* Black text */
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Bring further left */
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 25%; /* Shrink to a quarter of its size */
+    border: 2px solid black; /* Black outline */
+}
+
+#search-bar i {
+    color: #333;
+    margin: 0 5px;
+}
+
+#search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    background-color: transparent;
+}
+
+#account-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px; /* Bring further left */
+}
+
+#account-name {
+    font-size: 16px;
+    color: black; /* Black text */
+}
+
+#user-button {
+    background-color: transparent;
+    border: 2px solid black; /* Black outline */
+    color: black; /* Black icon */
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    top: 60px; /* Bring further down to avoid clipping */
+    left: -250px; /* Hide sidebar by default */
+    width: 250px;
+    height: calc(100% - 60px); /* Adjust height */
+    background-color: rgba(0, 0, 0, 0.8); /* Transparent darkened background */
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+#sidebar.open {
+    left: 0; /* Show sidebar */
+}
+
+#sidebar button {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid white; /* White border */
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px auto; /* Center buttons */
+}
+
+#sidebar button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main content styles */
+#content {
+    margin-top: 60px; /* Adjust for top bar */
+    padding: 20px;
+}
+
+/* Welcome title styles */
+#welcome-title {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 100px;
+}
+
+/* Modal overlay styles */
+#modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+    z-index: 1001;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    width: 400px; /* Larger modal */
+    color: #333;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.modal input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #555;
+}
+
+/* Close button for modals */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Tabs for Account modal */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.tabs button:hover {
+    background-color: #555;
+}
+
+.tab-content {
+    display: none; /* Hidden by default */
+}
+
+.tab-content.active {
+    display: block; /* Show active tab */
+}
+
+/* Social login styles */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.social-login button:hover {
+    background-color: #ccc;
+}
+
+/* How it works section */
+#how-it-works {
+    margin-top: 20px;
+}
+
+#how-it-works ol {
+    padding-left: 20px;
+}
